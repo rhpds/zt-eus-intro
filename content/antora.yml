@@ -1,0 +1,9 @@
+---
+name: modules
+version: master
+
+asciidoc:
+  attributes:
+    lab_name: "Introduction to Extended Update Support"
+    release-version: master
+    page-pagination: true

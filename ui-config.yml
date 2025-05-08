@@ -1,0 +1,21 @@
+---
+antora:
+  name: modules
+  dir: www
+  modules:
+    - name: "01-introduction"
+      label: "Introduction"
+      solveButton: true
+    - name: "02-preparing-eus"
+      label: "Preparing Eus"
+      solveButton: true
+    - name: "03-eus-update"
+      label: "Eus Update"
+      solveButton: true
+    - name: "04-updating-release"
+      label: "Updating Release"
+      solveButton: true
+
+tabs:
+  - name: ">_ terminal"
+    url: /wetty

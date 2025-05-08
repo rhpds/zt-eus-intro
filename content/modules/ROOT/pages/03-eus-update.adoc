@@ -1,0 +1,54 @@
+While EUS versions are supported for 24 months, it is a good practice to
+stay on as current a release as possible. However, some environments
+require recertification or are running software that the vendor only
+certifies for specific minor releases of Red Hat Enterprise Linux. In
+those circumstances, upgrading between EUS releases is the necessary
+balance.
+
+In order to see which releases are available for your system’s current
+major release, you will use the `+subscription-manager+` command:
+
+....
+subscription-manager release --list
+....
+
+Before you upgrade to the lastest minor EUS release, it is worth noting
+that checks are built-in to ensure a system doesn’t inadvertantly get
+updated to the absolute latest release. For instance, RHEL 9.3 is the
+current minor release but is _not_ an EUS release. Try setting 9.3 as
+the current release:
+
+....
+subscription-manager release --set=9.3
+dnf clean all
+dnf list --updates| wc -l
+....
+
+You receive several errors indicating the requested content could not be
+found. Now, select the correct release and verify there are packages
+available for update:
+
+....
+subscription-manager release --set=9.0
+dnf clean all
+dnf list --updates| wc -l
+....
+
+Update your system to the latest packages in this EUS release:
+
+....
+dnf update -y
+....
+
+Note: Your system’s output may vary slightly from the example:
+
+Now that you have the lastest packages availble in this EUS
+repositories, verify the minor version of RHEL is the same as Step 2:
+
+....
+cat /etc/redhat-release
+....
+
+Notice that with all the latest available packages installed, the server
+is still running RHEL 9.0. There is a newer EUS release available. In
+the final step, you will see how to upgrade between EUS versions.
