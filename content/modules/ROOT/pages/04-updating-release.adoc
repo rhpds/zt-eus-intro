@@ -1,9 +1,9 @@
-You just performed updates within a minor release of RHEL, namely 9.0.
+You just performed updates within a minor release of RHEL, namely 9.4.
 When it comes time to move to a newer EUS release, you’ll follow a
 similar process but specifying the later release:
 
 ....
-subscription-manager release --set=9.2
+subscription-manager release --set=9.4
 dnf clean all
 dnf list --updates| wc -l
 ....
