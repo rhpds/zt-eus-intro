@@ -12,7 +12,7 @@ dnf list --updates| wc -l
 The command above outputs a list of updates dnf finds then "`pipes`" it
 through the "`word count`" command to count the number of lines, giving
 you a rough estimate of the number of packages available. The command
-above tells you that to go from RHEL 9.0 proper to 9.3 latest will
+above tells you that to go from RHEL 9.0 proper to 9.6 latest will
 install about 393 new or updated packages.
 
 First, you will need to disable the standard repositories and enable the
