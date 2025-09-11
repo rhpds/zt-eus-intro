@@ -14,12 +14,12 @@ subscription-manager release --list
 
 Before you upgrade to the lastest minor EUS release, it is worth noting
 that checks are built-in to ensure a system doesn’t inadvertantly get
-updated to the absolute latest release. For instance, RHEL 9.3 is the
-current minor release but is _not_ an EUS release. Try setting 9.3 as
+updated to the absolute latest release. For instance, RHEL 9.6 is the
+current minor release but is _not_ an EUS release. Try setting 9.6 as
 the current release:
 
 ....
-subscription-manager release --set=9.3
+subscription-manager release --set=9.6
 dnf clean all
 dnf list --updates| wc -l
 ....
