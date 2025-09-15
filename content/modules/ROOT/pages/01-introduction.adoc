@@ -29,6 +29,10 @@ Since RHEL 8.0, the standard for EUS releases is to support *.0 and
 every even numbered release. (This policy has been upheld for RHEL 9.x
 as well.)
 
+== The username and password
+
+Username: *rhel* Password: {bastion_ssh_password}
+
 == Verifying Extended Update Support Availability
 
 Extended Update Support is an offering and therefore requires a
