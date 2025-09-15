@@ -2,22 +2,25 @@ You just performed updates within a minor release of RHEL, namely 9.4.
 When it comes time to move to a newer EUS release, you’ll follow a
 similar process but specifying the later release:
 
-....
+[source,bash,run]
+----
 subscription-manager release --set=9.4
 dnf clean all
 dnf list --updates| wc -l
-....
+----
 
 Note that 369 is an estimated number and may vary depending on the
 available packages at the date you initiated this lab. Now that you have
 the latest EUS release selected, run a dnf update:
 
-....
+[source,bash,run]
+----
 dnf update -y
-....
+----
 
 Finally, verify that the update was successful:
 
-....
+[source,bash,run]
+----
 cat /etc/redhat-release
-....
+----
