@@ -5,9 +5,10 @@ live, you’ll need to follow a couple extra steps, but first get an
 estimate of how many packages are available for update. This will be
 helpful to note for the remainder of this lab:
 
-....
+[source,bash,run]
+----
 dnf list --updates| wc -l
-....
+----
 
 The command above outputs a list of updates dnf finds then "`pipes`" it
 through the "`word count`" command to count the number of lines, giving
@@ -25,18 +26,20 @@ AppStream (or Application Stream) repository houses workloads, like
 language libraries and databases. You will then re-register the EUS
 version of these repositories.
 
-....
+[source,bash,run]
+----
  subscription-manager repos --disable rhel-9-for-x86_64-baseos-rpms
  subscription-manager repos --disable rhel-9-for-x86_64-appstream-rpms
-....
+----
 
 Next, enable the EUS repositories.
 
 *Pro Tip*: You can combine these two operations into a single command!
 
-....
+[source,bash,run]
+----
 subscription-manager repos --enable rhel-9-for-x86_64-baseos-eus-rpms --enable rhel-9-for-x86_64-appstream-eus-rpms
-....
+----
 
 Now that your system has the EUS repositories enabled, in the next step,
 you will actually go through the process of updating packages from the
