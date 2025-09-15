@@ -39,9 +39,10 @@ Extended Update Support is an offering and therefore requires a
 subscription to enable the expected functionality. From the OS level,
 you are able to determine whether a system has the EUS add-on available:
 
-....
+[source,bash,run]
+----
 subscription-manager repos | grep -i eus
-....
+----
 
 In the following steps, you will look at how to register your system
 with EUS and upgrade inbetween EUS releases. However, before you
@@ -49,6 +50,7 @@ subscribe your system to an EUS release, it is important to note which
 release your system is running. This information is stored in the file
 `+/etc/redhat-release+`
 
-....
+[source,bash,run]
+----
 cat /etc/redhat-release
-....
+----
