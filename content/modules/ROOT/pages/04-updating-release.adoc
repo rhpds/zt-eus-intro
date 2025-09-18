@@ -1,3 +1,5 @@
+== Inpelmenting EUS Release
+
 You just performed updates within a minor release of RHEL, namely 9.4.
 When it comes time to move to a newer EUS release, you’ll follow a
 similar process but specifying the later release:
@@ -5,8 +7,11 @@ similar process but specifying the later release:
 [source,bash,run]
 ----
 subscription-manager release --set=9.4
+
 dnf clean all
+
 dnf list --updates| wc -l
+
 ----
 
 Note that 369 is an estimated number and may vary depending on the
