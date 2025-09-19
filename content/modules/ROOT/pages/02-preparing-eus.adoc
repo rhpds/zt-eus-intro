@@ -1,4 +1,4 @@
-== Preparing EUS on your RHEL 9.4
+== Preparing EUS on your RHEL 9.5
 
 At this point, your system is not configured for EUS. If you were to run
 a `+dnf update+` with this configuration, you’d update to the latest
@@ -9,13 +9,13 @@ helpful to note for the remainder of this lab:
 
 [source,bash,run]
 ----
-dnf list --updates| wc -l
+dnf list --updates | wc -l
 ----
 
 The command above outputs a list of updates dnf finds then "`pipes`" it
 through the "`word count`" command to count the number of lines, giving
 you a rough estimate of the number of packages available. The command
-above tells you that to go from RHEL 9.0 proper to 9.4 latest will
+above tells you that to go from RHEL 9.0 proper to 9.5 latest will
 install about 393 new or updated packages.
 
 First, you will need to disable the standard repositories and enable the
