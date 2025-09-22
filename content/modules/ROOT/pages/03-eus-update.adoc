@@ -37,7 +37,7 @@ available for update:
 
 [source,bash,run]
 ----
-subscription-manager release --set=9.6
+subscription-manager release --set=9.4
 dnf clean all
 dnf list --updates| wc -l
 ----
