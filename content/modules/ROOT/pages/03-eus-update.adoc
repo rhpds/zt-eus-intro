@@ -18,7 +18,7 @@ subscription-manager release --list
 Before you upgrade to the lastest minor EUS release, it is worth noting
 that checks are built-in to ensure a system doesn’t inadvertantly get
 updated to the absolute latest release. For instance, RHEL 9.5 is the
-current minor release but is _not_ an EUS release. Try setting 9.4 as
+current minor release but is _not_ an EUS release. Try setting 9.5 as
 the current release:
 
 [source,bash,run]
@@ -37,7 +37,7 @@ available for update:
 
 [source,bash,run]
 ----
-subscription-manager release --set=9.4
+subscription-manager release --set=9.6
 dnf clean all
 dnf list --updates| wc -l
 ----
@@ -60,5 +60,5 @@ cat /etc/redhat-release
 ----
 
 Notice that with all the latest available packages installed, the server
-is still running RHEL 9.0. There is a newer EUS release available. In
+is still running RHEL 9.5. There is a newer EUS release available. In
 the final step, you will see how to upgrade between EUS versions.
