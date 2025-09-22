@@ -37,17 +37,13 @@ available for update:
 
 [source,bash,run]
 ----
-subscription-manager release --set=9.4
+subscription-manager release --set=9.6
+
 dnf clean all
+
 dnf list --updates| wc -l
 ----
 
-Update your system to the latest packages in this EUS release:
-
-[source,bash,run]
-----
-dnf update -y
-----
 
 Note: Your system’s output may vary slightly from the example:
 
