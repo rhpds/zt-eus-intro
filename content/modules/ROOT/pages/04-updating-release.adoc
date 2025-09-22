@@ -14,7 +14,7 @@ dnf list --updates| wc -l
 
 ----
 
-Note that 369 is an estimated number and may vary depending on the
+Note that 509 is an estimated number and may vary depending on the
 available packages at the date you initiated this lab. Now that you have
 the latest EUS release selected, run a dnf update:
 
