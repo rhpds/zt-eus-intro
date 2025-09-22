@@ -1,12 +1,12 @@
 == Inpelmenting EUS Release
 
-You just performed updates within a minor release of RHEL, namely 9.4.
+You just performed updates within a minor release of RHEL, namely 9.6.
 When it comes time to move to a newer EUS release, you’ll follow a
 similar process but specifying the later release:
 
 [source,bash,run]
 ----
-subscription-manager release --set=9.4
+subscription-manager release --set=9.6
 
 dnf clean all
 
